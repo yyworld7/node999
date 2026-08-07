@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>Earth Guardians - Climate Action Now</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,13 +14,14 @@
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
-            --text: #333333;
+            --primary: #00695c;
+            --secondary: #00897b;
+            --accent: #26a69a;
+            --light: #e0f2f1;
+            --dark: #004d40;
+            --text: #2c3e50;
             --white: #ffffff;
+            --coral: #ff7043;
         }
 
         body {
@@ -30,13 +31,13 @@
         }
 
         header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to right, #004d40, #00695c);
             color: var(--white);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
         }
 
         .container {
@@ -57,10 +58,12 @@
             gap: 10px;
             font-size: 1.8rem;
             font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .logo i {
             font-size: 2rem;
+            color: #80cbc4;
         }
 
         nav ul {
@@ -79,10 +82,12 @@
             transition: all 0.3s ease;
             padding: 0.5rem 0;
             position: relative;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
         }
 
         nav ul li a:hover {
-            color: var(--accent);
+            color: #80cbc4;
         }
 
         nav ul li a::after {
@@ -92,7 +97,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--accent);
+            background-color: #80cbc4;
             transition: width 0.3s ease;
         }
 
@@ -101,7 +106,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 40, 30, 0.5)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -119,12 +124,14 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+            letter-spacing: -1px;
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
+            opacity: 0.95;
         }
 
         .btn {
@@ -139,12 +146,34 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            letter-spacing: 0.4px;
         }
 
         .btn:hover {
-            background-color: var(--primary);
+            background-color: #00897b;
             transform: translateY(-3px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--white);
+            padding: 0.7rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--white);
+            cursor: pointer;
+            letter-spacing: 0.4px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
         }
 
         section {
@@ -158,10 +187,11 @@
 
         .section-title h2 {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--dark);
             margin-bottom: 1rem;
             position: relative;
             display: inline-block;
+            letter-spacing: -0.5px;
         }
 
         .section-title h2::after {
@@ -172,14 +202,15 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background-color: var(--accent);
+            background: linear-gradient(to right, var(--accent), #80cbc4);
             border-radius: 2px;
         }
 
         .section-title p {
-            color: var(--text);
+            color: #546e7a;
             max-width: 700px;
             margin: 0 auto;
+            font-size: 1.05rem;
         }
 
         .about-content {
@@ -190,9 +221,9 @@
         }
 
         .about-img {
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
         }
 
         .about-img img {
@@ -210,10 +241,12 @@
             font-size: 1.8rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
+            letter-spacing: -0.3px;
         }
 
         .about-text p {
             margin-bottom: 1.5rem;
+            color: #455a64;
         }
 
         .stats {
@@ -227,18 +260,21 @@
             text-align: center;
             padding: 2rem 1rem;
             background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 3px solid transparent;
         }
 
         .stat-item:hover {
             transform: translateY(-10px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--accent);
         }
 
         .stat-item i {
             font-size: 2.5rem;
-            color: var(--primary);
+            color: #00897b;
             margin-bottom: 1rem;
         }
 
@@ -246,14 +282,16 @@
             font-size: 2.5rem;
             color: var(--dark);
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         .stat-item p {
-            color: var(--text);
+            color: #607d8b;
+            font-weight: 500;
         }
 
         .initiatives {
-            background-color: var(--white);
+            background-color: #f5faf9;
         }
 
         .initiatives-grid {
@@ -263,15 +301,16 @@
         }
 
         .initiative-card {
-            background-color: var(--light);
-            border-radius: 10px;
+            background-color: var(--white);
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .initiative-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
         }
 
         .initiative-img {
@@ -298,22 +337,52 @@
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--dark);
+            letter-spacing: -0.3px;
         }
 
         .initiative-content p {
             margin-bottom: 1.5rem;
+            color: #546e7a;
         }
 
         .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #004d40, #00695c, #00897b);
             color: var(--white);
             text-align: center;
             padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 60%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .cta .container {
+            position: relative;
+            z-index: 1;
         }
 
         .cta h2 {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
         }
 
         .cta p {
@@ -322,21 +391,25 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            opacity: 0.9;
         }
 
         .cta .btn {
             background-color: var(--white);
-            color: var(--primary);
+            color: #00695c;
+            font-size: 1.05rem;
+            padding: 0.9rem 2.4rem;
         }
 
         .cta .btn:hover {
-            background-color: var(--accent);
-            color: var(--white);
+            background-color: #e0f2f1;
+            color: #004d40;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         footer {
-            background-color: var(--dark);
-            color: var(--white);
+            background-color: #1a232e;
+            color: #cfd8dc;
             padding: 3rem 0 1rem;
         }
 
@@ -352,6 +425,8 @@
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 10px;
+            color: #ffffff;
+            letter-spacing: -0.2px;
         }
 
         .footer-column h3::after {
@@ -361,11 +436,14 @@
             left: 0;
             width: 40px;
             height: 2px;
-            background-color: var(--accent);
+            background-color: #80cbc4;
+            border-radius: 1px;
         }
 
         .footer-column p {
             margin-bottom: 1rem;
+            color: #b0bec5;
+            font-size: 0.95rem;
         }
 
         .footer-links {
@@ -377,19 +455,21 @@
         }
 
         .footer-links li a {
-            color: var(--light);
+            color: #b0bec5;
             text-decoration: none;
             transition: all 0.3s ease;
+            font-size: 0.95rem;
         }
 
         .footer-links li a:hover {
-            color: var(--accent);
-            padding-left: 5px;
+            color: #80cbc4;
+            padding-left: 6px;
         }
 
         .social-links {
             display: flex;
             gap: 1rem;
+            margin-top: 0.5rem;
         }
 
         .social-links a {
@@ -398,22 +478,26 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.08);
             border-radius: 50%;
-            color: var(--white);
+            color: #cfd8dc;
             text-decoration: none;
             transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            background-color: var(--accent);
+            background-color: #26a69a;
+            color: #ffffff;
             transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .copyright {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #90a4ae;
+            font-size: 0.9rem;
         }
 
         .mobile-menu {
@@ -426,15 +510,15 @@
             .about-content {
                 grid-template-columns: 1fr;
             }
-            
+
             .initiatives-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
+
             .stats {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -444,51 +528,55 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .hero p {
                 font-size: 1.1rem;
             }
-            
+
             nav ul {
                 display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: var(--primary);
+                background-color: #004d40;
                 flex-direction: column;
                 padding: 1rem 0;
                 text-align: center;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                z-index: 99;
             }
-            
+
             nav ul.active {
                 display: flex;
             }
-            
+
             nav ul li {
                 margin: 0;
                 padding: 0.8rem 0;
             }
-            
+
             .mobile-menu {
                 display: block;
             }
-            
+
             .initiatives-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .footer-content {
                 grid-template-columns: 1fr;
             }
-            
+
             .stats {
                 grid-template-columns: 1fr;
             }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
         }
 
-        /* Animation for stats counter */
         .counter {
             transition: all 0.5s ease;
         }
@@ -499,8 +587,8 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-shield-halved"></i>
+                <span>Earth Guardians</span>
             </div>
             <nav>
                 <div class="mobile-menu">
@@ -508,10 +596,10 @@
                 </div>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#initiatives">Programs</a></li>
+                    <li><a href="#get-involved">Take Action</a></li>
+                    <li><a href="#contact">Reach Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -520,9 +608,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>Stand Up for the Climate. Protect What Matters.</h1>
+            <p>Earth Guardians mobilizes communities worldwide to fight climate change, defend ecosystems, and build a resilient future for all living beings.</p>
+            <a href="#get-involved" class="btn">Join the Movement</a>
         </div>
     </section>
 
@@ -530,41 +618,41 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>Who We Are</h2>
+                <p>Earth Guardians is a youth-led climate action network committed to bold solutions and grassroots impact.</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Volunteers restoring a coastal wetland">
                 </div>
                 <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <h3>Our Purpose &amp; Promise</h3>
+                    <p>Earth Guardians was born in 2013 from a simple belief: that everyday people have the power to reverse environmental damage. We combine local action with global advocacy to demand climate justice, restore natural habitats, and hold polluters accountable.</p>
+                    <p>What started as a small group of students in Portland, Oregon has grown into a coalition of over 85,000 volunteers, campaigners, scientists, and educators operating in 95+ countries.</p>
+                    <p>We don't just talk about change — we build it. From legal challenges against deforestation to urban rewilding projects, every campaign is rooted in science and powered by community.</p>
+                    <a href="#" class="btn">Discover Our Story</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+                    <i class="fas fa-gavel"></i>
+                    <h3 class="counter" data-target="340">0</h3>
+                    <p>Legal Actions Won</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3 class="counter" data-target="85000">0</h3>
+                    <p>Active Volunteers</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                    <i class="fas fa-map-pin"></i>
+                    <h3 class="counter" data-target="95">0</h3>
+                    <p>Countries Active</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <i class="fas fa-seedling"></i>
+                    <h3 class="counter" data-target="4200">0</h3>
+                    <p>Habitat Restorations</p>
                 </div>
             </div>
         </div>
@@ -574,38 +662,38 @@
     <section class="initiatives" id="initiatives">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>Our Programs</h2>
+                <p>Targeted initiatives that tackle the root causes of ecological breakdown and deliver measurable impact.</p>
             </div>
             <div class="initiatives-grid">
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Forest and land restoration project">
                     </div>
                     <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <h3>Forest &amp; Land Restoration</h3>
+                        <p>Reversing deforestation by working with Indigenous communities and local farmers to replant native woodlands, stabilize soil, and revive watersheds across five continents.</p>
+                        <a href="#" class="btn">Explore Program</a>
                     </div>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
+                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Coastal resilience and marine defense">
                     </div>
                     <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <h3>Coastal &amp; Marine Defense</h3>
+                        <p>Fortifying coastlines through mangrove restoration, coral reef monitoring, and community-led campaigns to eliminate single-use plastics from oceans and waterways.</p>
+                        <a href="#" class="btn">Explore Program</a>
                     </div>
                 </div>
                 <div class="initiative-card">
                     <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Community solar and clean energy transition">
                     </div>
                     <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                        <h3>Community Clean Energy</h3>
+                        <p>Installing solar microgrids in underserved neighborhoods, training local technicians, and advocating for policies that accelerate a just transition away from fossil fuels.</p>
+                        <a href="#" class="btn">Explore Program</a>
                     </div>
                 </div>
             </div>
@@ -615,9 +703,9 @@
     <!-- CTA Section -->
     <section class="cta" id="get-involved">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>Ready to Become an Earth Guardian?</h2>
+            <p>Whether you have five minutes or five days, your voice matters. Sign up to receive action alerts, join a local chapter, or donate to fuel our campaigns.</p>
+            <a href="#" class="btn">Get Started Today</a>
         </div>
     </section>
 
@@ -626,44 +714,44 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>Earth Guardians</h3>
+                    <p>We defend the planet through courageous advocacy, community organizing, and relentless optimism. Every victory starts with someone who refused to look away.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3>Navigate</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#initiatives">Programs</a></li>
+                        <li><a href="#get-involved">Take Action</a></li>
+                        <li><a href="#contact">Reach Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h3>Campaigns</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">Climate Justice Fund</a></li>
+                        <li><a href="#">Ocean Plastic Treaty</a></li>
+                        <li><a href="#">Urban Rewilding</a></li>
+                        <li><a href="#">Youth Climate Councils</a></li>
+                        <li><a href="#">Green Jobs Alliance</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i>&nbsp; 742 Evergreen Terrace, Portland, OR 97201</p>
+                    <p><i class="fas fa-phone"></i>&nbsp; +1 (503) 555-0198</p>
+                    <p><i class="fas fa-envelope"></i>&nbsp; hello@earthguardians.org</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 Earth Guardians. All rights reserved. | Protecting the planet, one community at a time.</p>
             </div>
         </div>
     </footer>
@@ -677,15 +765,15 @@
         // Counter Animation
         function animateCounters() {
             const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-            
+            const speed = 180;
+
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
                 const count = +counter.innerText;
-                
+
                 const inc = target / speed;
-                
-                if(count < target) {
+
+                if (count < target) {
                     counter.innerText = Math.ceil(count + inc);
                     setTimeout(animateCounters, 1);
                 } else {
@@ -701,22 +789,21 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
+                if (targetId === '#') return;
+
                 const targetElement = document.querySelector(targetId);
-                if(targetElement) {
+                if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
+
                     document.querySelector('nav ul').classList.remove('active');
                 }
             });
         });
     </script>
 </body>
-
 </html>
